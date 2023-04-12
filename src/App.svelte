@@ -14,7 +14,7 @@
 	export let average = 0;
 	export let percentage = 0;
 
-	fetch(`http://${window.location.host}:8090/users/${name}`).then(d => d.json()).then(d => {
+	fetch(`http://${window.location.host.split(':')[0]}:8090/users/${name}`).then(d => d.json()).then(d => {
 		grid_data = d.grid_data;
 		most_commits = d.most_commits;
 		all_commits = d.all_commits;
